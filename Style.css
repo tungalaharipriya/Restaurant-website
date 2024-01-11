@@ -1,0 +1,414 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: whitesmoke;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    z-index: 1000;
+}
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+section nav ul{
+    list-style: none;
+}
+section nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+section nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.1s;
+}
+section nav ul li a::after{
+    content: '' ;
+    width: 0;
+    height: 1px;
+    background: rgb(26, 64, 134);
+    display: block;
+    transition: 0.2s linear;
+}
+section nav ul li a:hover::after{
+    width: 100%;
+}
+section nav ul li a:hover{
+    color: rgb(110, 110, 221);
+}
+section nav .icon i{
+    font-size: 18px;
+    color:black;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+section nav .icon i:hover{
+    color:rgb(228, 89, 112);
+}
+
+/*Main*/
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top:130px;
+}
+section .main .text h1{
+    font-size: 40px;
+    position: relative;
+    top: -50px;
+    font-style: italic;
+}
+section .main .main_image img{
+   width: 570px;
+   position: relative;
+   left:70px;
+}
+section p{
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 80px;
+    bottom: 100px;
+    line-height: 20px;
+}
+section .main_btn{
+   background: black;
+   position: relative;
+   left: 80px;
+   bottom: 10px;
+   width: 150px;
+   cursor:pointer;
+   padding: 12px 25px;
+}
+section .main_btn a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration: none;
+}
+section .main_btn i{
+    color: #fff;
+    transition: 0.2s;
+}
+section .main_btn:hover i{
+    transform: translate(5px);
+}
+
+/*About*/
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about .about_main .image img{
+   width: 650px;
+   position: relative;
+   top:70px;
+}
+.about .about_main .about_text h1 span{
+    color: rgb(233, 91, 40);
+    margin-right: 15px;
+    font-family: sans-serif;
+}
+.about .about_main .about_text h1{
+    font-size: 40px;
+    position: relative;
+    bottom: 20px;
+    top:8px;
+    font-style: italic;
+    text-decoration-line: underline;
+}
+.about .about_main .about_text h3{
+    font-size: 30px;
+    margin: 30px 0 10px 0;
+}
+.about .about_main .about_text p{
+    width: 600px;
+    text-align: justify;
+    margin-right:30px;
+    line-height: 25px;
+}
+.about_btn{
+    background: rgb(235, 92, 40);
+    padding:12px 25px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    left:52%;
+    bottom:10px;
+    top:20px;
+}
+
+/*Menu*/
+
+.menu{
+    width:100%;
+    padding:100px 0;
+}
+.menu h1{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color:rgb(87, 24, 133);
+    font-style: italic;
+    text-decoration: underline;
+}
+.menu .menu-box{
+    width:100%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:10px;
+}
+.menu .menu-box .menu_card{
+    width: 320px;
+    height: 520px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    box-shadow: 0 0 10px black;
+}
+.menu .menu-box .menu_card .menu_image{
+    width: 300px;
+    height: 245px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.menu .menu-box .menu_card .menu_image img{
+    width:100%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+.menu .menu-box .menu_card .menu_image:hover img{
+    transform:scale(1.1);
+}
+.menu .menu-box .menu_card .small_card{
+    width: 45px;
+    height: 45px;
+    float:right;
+    position: relative;
+    top:-240px;
+    right: -8px;
+    opacity: 1;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+.menu .menu-box .menu_card:hover .small_card{
+    position: relative;
+    top:-240px;
+    right: 20px;
+    opacity: 1;
+}
+.menu .menu-box .menu_card .menu_info h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color:rgb(196, 80, 80)
+}
+.menu .menu-box .menu_card .menu_info p{
+    text-align: center;
+    margin-top: 5px;
+    line-height: 20px;
+}
+.menu .menu-box .menu_card .menu_info h3{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+}
+.menu .menu-box .menu_card .menu_info .menu_icon{
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+.menu .menu-box .menu_card .menu_info .menu_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    background: black;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.2s;
+}
+
+/*Review*/
+
+.review{
+    width:100%;
+    height:100vh;
+    padding:100px 0;
+}
+.review h1{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(201, 72, 49);
+    margin-bottom:2px ;
+    margin-top: -10px;
+    font-style: italic;
+    text-decoration: underline;
+}
+.review .review_box{
+    width:100%;
+    margin:40px auto;
+    display: flex;
+}
+.review .review_box .review_card{
+    width:350px;
+    height: 475px;
+    box-shadow: 0 2px 8px black;
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+}
+.review .review_box .review_card .review_profile{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+}
+.review .review_box .review_card .review_profile img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border:5px solid #cccccc;
+}
+.review .review_box .review_card .review_text{
+    text-align: center;
+}
+.review .review_box .review_card .review_text .name{
+    color: black;
+    transition: 0.2s; 
+}
+.review .review_box .review_card .review_text .review_social i{
+    margin: 5px 1px;
+    font-size: 15px;
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.review .review_box .review_card .review_text p{
+    text-align: center;
+    line-height: 27px;
+    transition: 0.3s;
+}
+
+/*Order*/
+
+.order{
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+}
+.order h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#e76f0d;
+    font-size: 50px;
+    font-style: oblique;
+    text-decoration: underline;
+
+}
+.order_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.order .order_main .order_image img{
+    width: 400px;
+}
+.order .order_main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:0 20px;
+}
+.order .order_main form .input p{
+    line-height: 25px;
+}
+.order .order_main form .input{
+    margin:5px;
+}
+.order .order_main form .input input{
+    width:300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+.order .order_main form .input input:focus{
+    border:2px solid #fac031;
+}
+.order .order_main form .order_btn{
+    padding: 10px 0;
+    background: #000;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    padding: 10px 0 0 20px;
+    background: #eeeeee;
+}
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+footer .footer_main .footer_tag h2{
+    color:black;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+footer .footer_main .footer_tag p{
+    margin:10px 0;
+}
+footer .footer_main .footer_tag i{
+    margin:0 5px;
+    cursor:pointer;
+}
